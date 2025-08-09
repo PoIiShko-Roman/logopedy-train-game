@@ -1,0 +1,12 @@
+﻿[
+  { "id":"tygr",      "text":"тигр",       "img":"assets/img/words/T/tygr.png" },
+  { "id":"tort",      "text":"торт",       "img":"assets/img/words/T/tort.png" },
+  { "id":"tarilka",   "text":"тарілка",    "img":"assets/img/words/T/tarilka.png" },
+  { "id":"traktor",   "text":"трактор",    "img":"assets/img/words/T/traktor.png" },
+  { "id":"teleskop",  "text":"телескоп",   "img":"assets/img/words/T/teleskop.png" },
+  { "id":"tramvai",   "text":"трамвай",    "img":"assets/img/words/T/tramvai.png" },
+  { "id":"televizor", "text":"телевізор",  "img":"assets/img/words/T/televizor.png" },
+  { "id":"tisto",     "text":"тісто",      "img":"assets/img/words/T/tisto.png" },
+  { "id":"tyulpan",   "text":"тюльпан",    "img":"assets/img/words/T/tyulpan.png" },
+  { "id":"tigraycha", "text":"тигреня",    "img":"assets/img/words/T/tigraycha.png" }
+]

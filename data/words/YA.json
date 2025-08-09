@@ -1,0 +1,12 @@
+﻿[
+  { "id":"yabluko",   "text":"яблуко",     "img":"assets/img/words/YA/yabluko.png" },
+  { "id":"yakir",     "text":"якір",       "img":"assets/img/words/YA/yakir.png" },
+  { "id":"yahoda",    "text":"ягода",      "img":"assets/img/words/YA/yahoda.png" },
+  { "id":"yalynka",   "text":"ялинка",     "img":"assets/img/words/YA/yalynka.png" },
+  { "id":"yashchirka","text":"ящірка",     "img":"assets/img/words/YA/yashchirka.png" },
+  { "id":"yazyk",     "text":"язик",       "img":"assets/img/words/YA/yazyk.png" },
+  { "id":"yama",      "text":"яма",        "img":"assets/img/words/YA/yama.png" },
+  { "id":"yaiechnia", "text":"яєчня",      "img":"assets/img/words/YA/yaiechnia.png" },
+  { "id":"yakhta",    "text":"яхта",       "img":"assets/img/words/YA/yakhta.png" },
+  { "id":"yangol",    "text":"янгол",      "img":"assets/img/words/YA/yangol.png" }
+]

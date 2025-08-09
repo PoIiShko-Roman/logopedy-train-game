@@ -1,0 +1,12 @@
+﻿[
+  { "id":"chaynyk",   "text":"чайник",     "img":"assets/img/words/CH/chaynyk.png" },
+  { "id":"cherepakha", "text":"черепаха",  "img":"assets/img/words/CH/cherepakha.png" },
+  { "id":"chereshnya", "text":"черешня",   "img":"assets/img/words/CH/chereshnya.png" },
+  { "id":"choven",    "text":"човен",      "img":"assets/img/words/CH/choven.png" },
+  { "id":"chashka",   "text":"чашка",      "img":"assets/img/words/CH/chashka.png" },
+  { "id":"choboty",   "text":"чоботи",     "img":"assets/img/words/CH/choboty.png" },
+  { "id":"chornytsia","text":"чорниця",    "img":"assets/img/words/CH/chornytsia.png" },
+  { "id":"chemodan",  "text":"чемодан",    "img":"assets/img/words/CH/chemodan.png" },
+  { "id":"chaplya",   "text":"чапля",      "img":"assets/img/words/CH/chaplya.png" },
+  { "id":"chervyak",  "text":"черв’як",    "img":"assets/img/words/CH/chervyak.png" }
+]

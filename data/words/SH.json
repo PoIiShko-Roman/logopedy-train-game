@@ -1,0 +1,12 @@
+﻿[
+  { "id":"shafa",     "text":"шафа",       "img":"assets/img/words/SH/shafa.png" },
+  { "id":"shapka",    "text":"шапка",      "img":"assets/img/words/SH/shapka.png" },
+  { "id":"shyshka",   "text":"шишка",      "img":"assets/img/words/SH/shyshka.png" },
+  { "id":"sholom",    "text":"шолом",      "img":"assets/img/words/SH/sholom.png" },
+  { "id":"shkola",    "text":"школа",      "img":"assets/img/words/SH/shkola.png" },
+  { "id":"shkarpetky","text":"шкарпетки",  "img":"assets/img/words/SH/shkarpetky.png" },
+  { "id":"shynshyla", "text":"шиншила",    "img":"assets/img/words/SH/shynshyla.png" },
+  { "id":"shyna",     "text":"шина",       "img":"assets/img/words/SH/shyna.png" },
+  { "id":"shum",      "text":"шум",        "img":"assets/img/words/SH/shum.png" },
+  { "id":"shuba",     "text":"шуба",       "img":"assets/img/words/SH/shuba.png" }
+]

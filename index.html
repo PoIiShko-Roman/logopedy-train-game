@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Логопедичні ігри</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="brand" id="navBrand">Логопедичні ігри</div>
+      <nav class="menu">
+        <button class="menu__btn" id="navHome">Головна</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Головна = вибір гри -->
+    <section id="home">
+      <h2>Оберіть гру</h2>
+      <div class="game-list">
+        <button class="game-btn" id="gameTrain">Потяг</button>
+      </div>
+    </section>
+
+    <!-- Вибір літери -->
+    <section id="letters" style="display:none;">
+      <h2>Оберіть літеру</h2>
+      <p class="muted">Список доступних літер з файлу <code>data/letters.json</code> (EN-коди)</p>
+      <div id="lettersGrid" class="letters-grid"></div>
+      <div style="margin-top:16px;">
+        <button id="backToHome" class="menu__btn">Назад</button>
+      </div>
+    </section>
+
+    <!-- Сцена гри -->
+    <section id="train" style="display:none;">
+      <h2>Потяг — літера <span id="trainLetter">?</span></h2>
+
+      <div class="toolbar">
+        <button id="backToLetters" class="menu__btn">← До літер</button>
+        <button id="restartTrain" class="menu__btn">Перезапустити</button>
+      </div>
+
+      <div class="playfield" id="playfield">
+        <div class="sky"></div>
+        <div class="ground"></div>
+        <div class="track"></div>
+
+        <!-- Кабіна як картинка + літера поверх -->
+        <div class="loco">
+          <img src="assets/img/cab.png" class="loco-img" alt="Локомотив">
+          <div class="loco-letter" id="locoLetter">Р</div>
+        </div>
+
+        <!-- Слоти та шар вагонів -->
+        <div class="slots" id="slots"></div>
+        <div id="wagonsLayer"></div>
+      </div>
+
+      <p class="muted" id="trainHint">Перетягни вагон до підсвіченого пунктирного слоту (зліва → вправо).</p>
+
+      <!-- КВІЗ -->
+      <section id="quiz" style="display:none;">
+        <div class="quiz-head">
+          <div id="quizCounter">Питання 1/6</div>
+          <button id="quizRestart" class="menu__btn" style="display:none;">Ще раз</button>
+        </div>
+        <div class="quiz-q" id="quizQuestion">Питання…</div>
+        <div class="quiz-target" id="quizTarget"></div>
+        <div class="quiz-options" id="quizOptions"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

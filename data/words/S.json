@@ -1,0 +1,12 @@
+﻿[
+  { "id":"sonce",     "text":"сонце",     "img":"assets/img/words/S/sonce.png" },
+  { "id":"slon",      "text":"слон",      "img":"assets/img/words/S/slon.png" },
+  { "id":"sova",      "text":"сова",      "img":"assets/img/words/S/sova.png" },
+  { "id":"sik",       "text":"сік",       "img":"assets/img/words/S/sik.png" },
+  { "id":"sil",       "text":"сіль",      "img":"assets/img/words/S/sil.png" },
+  { "id":"syr",       "text":"сир",       "img":"assets/img/words/S/syr.png" },
+  { "id":"sany",      "text":"сани",      "img":"assets/img/words/S/sany.png" },
+  { "id":"snig",      "text":"сніг",      "img":"assets/img/words/S/snig.png" },
+  { "id":"sokyra",    "text":"сокира",    "img":"assets/img/words/S/sokyra.png" },
+  { "id":"sobaka",    "text":"собака",    "img":"assets/img/words/S/sobaka.png" }
+]

@@ -1,0 +1,118 @@
+/* Скидання/база */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial, sans-serif;background:#f2f2f2;color:#333;line-height:1.5;padding:20px;overflow-x:hidden}
+main{margin-top:20px;background:#fff;padding:15px;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,.1)}
+
+/* Топбар */
+.topbar{position:sticky;top:0;z-index:10;background:#4CAF50;color:#fff;border-radius:8px;margin-bottom:12px}
+.topbar__inner{display:flex;align-items:center;justify-content:space-between;padding:14px 16px}
+.brand{font-weight:900;letter-spacing:.4px;cursor:pointer;font-size:1.5rem}
+.menu{display:flex;gap:8px}
+.menu__btn{font-size:1rem;font-weight:700;padding:10px 14px;border:0;border-radius:8px;background:#fff;color:#2d2d2d;cursor:pointer}
+.menu__btn:hover{background:#f2f2f2}
+.muted{color:#666;margin-top:4px}
+
+/* Головна */
+.game-list{margin-top:20px;display:flex;flex-direction:column;gap:15px}
+.game-btn{font-size:1.5rem;padding:20px;border:none;border-radius:10px;background:#4CAF50;color:#fff;font-weight:bold;cursor:pointer;transition:.2s}
+.game-btn:hover{background:#45a049}
+
+/* Вибір літери */
+.letters-grid{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(56px,1fr));gap:10px}
+.letter-btn{aspect-ratio:1/1;border:1px solid #ddd;border-radius:10px;background:#fff;font-weight:800;font-size:18px;cursor:pointer}
+.letter-btn:hover{background:#f7f7f7}
+.letter-btn[disabled]{opacity:.4;cursor:not-allowed;filter:grayscale(.2)}
+
+/* Поле гри */
+.toolbar{margin:12px 0;display:flex;gap:8px}
+.playfield{
+  position:relative;height:clamp(520px, 78vh, 780px);
+  border-radius:12px;background:linear-gradient(180deg,#e6f3ff 0%,#cfe8ff 60%,#c8d8ef 100%);
+  border:1px solid #cbd5e1;overflow:hidden;
+}
+.sky{position:absolute;inset:0;background:
+  radial-gradient(600px 300px at 10% -5%, rgba(34,211,238,.2), transparent),
+  radial-gradient(500px 250px at 90% 0%,  rgba(167,139,250,.2), transparent)}
+.ground{position:absolute;left:0;right:0;bottom:0;height:140px;background:linear-gradient(180deg,#92d18b,#6bb86d);border-top:1px solid #86b487}
+.track{position:absolute;left:16px;right:16px;bottom:100px;height:6px;background:#6b7280;border-radius:4px;box-shadow:0 2px 0 #475569 inset}
+
+/* Кабіна (важливо: left/width синхронізовані зі змінними у .slots) */
+.loco{position:absolute;left:10px;bottom:110px;width:240px;height:160px}
+.loco-img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.loco-letter{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:56px;font-weight:900;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.35);pointer-events:none}
+
+/* Слоти — 6 колонок; кожна = var(--slotSize) */
+.slots{
+  --loco-left: 10px;   /* = .loco left */
+  --loco-w:    240px;  /* = .loco width */
+  position:absolute;
+  left: calc(var(--loco-left) + var(--loco-w) + 16px);
+  right:16px; bottom:110px;
+  display:grid;
+  grid-template-columns: repeat(6, minmax(0, var(--slotSize, 160px)));
+  gap:12px; align-items:start; z-index:1;
+}
+
+.slot{
+  width:var(--slotSize,160px); height:var(--slotSize,160px);
+  border:2px dashed #8aa3b8;border-radius:12px;background:#ffffffa8;
+  box-shadow: inset 0 0 0 2px #ffffff55;
+}
+.slot.highlight{border-color:#4CAF50;background:#eaf7ec;box-shadow:inset 0 0 0 3px rgba(76,175,80,.35)}
+.slot.occupied{border-color:transparent;background:transparent;box-shadow:none}
+
+/* Шар вагонів */
+#wagonsLayer{position:absolute;inset:0;z-index:2}
+
+/* Вагон = квадрат розміру слоту; фон прозорий */
+.wagon{
+  position:absolute;
+  width:var(--slotSize,160px); height:var(--slotSize,160px);
+  display:grid; grid-template-rows:1fr auto; align-items:end; justify-items:center;
+  background:transparent; padding:0; box-shadow:none;
+  text-align:center; cursor:grab; touch-action:none; user-select:none;
+}
+.wagon:active{cursor:grabbing}
+.wagon.dragging{z-index:10}
+.wagon.fixed{cursor:default}
+
+/* тягнути за будь-яке місце */
+.wagon, .wagon *{pointer-events:none}
+.wagon{pointer-events:auto}
+
+/* Зона зображення та картинка слова (зверху, не чіпає колеса) */
+.wagon .img-wrap{position:relative;width:100%;height:100%}
+.wagon .base{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:1}
+.wagon .word-img{
+  position:absolute; top:10%; left:50%; transform:translateX(-50%);
+  max-width:70%; max-height:50%; object-fit:contain; z-index:2;
+}
+.wagon .label{font-weight:800;color:#1f2937;font-size:16px;pointer-events:none}
+
+/* ===== КВІЗ ===== */
+#quiz{margin-top:16px;padding:12px;border:1px solid #e5e7eb;border-radius:12px;background:#fafafa}
+.quiz-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+#quizCounter{font-weight:800;color:#374151}
+.quiz-q{font-size:18px;font-weight:700;margin:8px 0 10px}
+.quiz-target{margin-bottom:10px;display:flex;gap:10px;align-items:center}
+
+/* Колонки під розмір слоту */
+.quiz-options{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(var(--slotSize,160px) + 24px), 1fr));
+  gap:12px; place-items:center;
+}
+.quiz-opt{
+  display:flex; flex-direction:column; align-items:center; gap:6px;
+  border:1px solid #e5e7eb; border-radius:12px; padding:8px; background:#fff;
+  cursor:pointer; user-select:none; transition:transform .08s ease;
+}
+.quiz-opt:active{transform:scale(.98)}
+.quiz-opt.correct{outline:3px solid #4CAF50}
+.quiz-opt.wrong{outline:3px solid #ef4444}
+.quiz-opt .t{font-weight:800;text-align:center}
+
+/* Міні-вагон у квізі — як у грі */
+.quiz-wagon{position:relative;width:var(--slotSize,160px);height:var(--slotSize,160px)}
+.quiz-wagon .base{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.quiz-wagon .word{position:absolute;top:10%;left:50%;transform:translateX(-50%);max-width:70%;max-height:50%;object-fit:contain}

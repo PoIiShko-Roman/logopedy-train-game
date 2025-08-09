@@ -1,0 +1,12 @@
+[
+  { "id":"robot",    "text":"робот",      "img":"assets/img/words/R/robot.png" },
+  { "id":"raketa",   "text":"ракета",     "img":"assets/img/words/R/raketa.png" },
+  { "id":"ryba",     "text":"риба",       "img":"assets/img/words/R/ryba.png" },
+  { "id":"rak",      "text":"рак",        "img":"assets/img/words/R/rak.png" },
+  { "id":"ranez",    "text":"ранець",     "img":"assets/img/words/R/ranez.png" },
+  { "id":"remin",    "text":"ремінь",     "img":"assets/img/words/R/remin.png" },
+  { "id":"ravlyk",   "text":"равлик",     "img":"assets/img/words/R/ravlyk.png" },
+  { "id":"romashka", "text":"ромашка",    "img":"assets/img/words/R/romashka.png" },
+  { "id":"radio",    "text":"радіо",      "img":"assets/img/words/R/radio.png" },
+  { "id":"rukavychka","text":"рукавичка", "img":"assets/img/words/R/rukavychka.png" }
+]
